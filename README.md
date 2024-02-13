@@ -1,6 +1,9 @@
 # Steam Auto Balance API DIGISELLER
 
 Ubuntu 20.04 LTC system is required to run docker
+
+Digiseller-API [`Blink`](https://my.digiseller.com/inside/api_general.asp)
+
 ## Steps
 
 * Let's update the system: `sudo apt update`
