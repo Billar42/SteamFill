@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  mongo-db:
+    image: mongo
+    volumes:
+      - steam_db:/data/db
+    networks:
+      - steam-network
+
+  app:
+    build:
+      context: .
+    ports:
+      - "80:80"
+    networks:
+      - steam-network
+
+
+volumes:
+  steam_db:
+
+networks:
+  steam-network:
+    driver: bridge

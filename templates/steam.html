@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Steam</title>
+    <link rel="stylesheet" href="static/style.css">
+    {% if status != 'success' %}
+        <meta http-equiv="refresh" content="10">
+    {% endif %}
+    ХУЙ
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+    <section>
+      <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <div class="signin">
+            <div class="content">
+                <h3>Steam пополнение</h3>
+                <div class="form">
+                    <div class="links">
+                        <a href="#">Статус</a>
+                        {% if status == 'success' %}
+                            <a href="#" class="suc" style="color: #0f0;">Выполнен</a>
+                        {% elif status == 'start' or status == 'work' %}
+                            <a href="#" class="suc" style="color: #F4CA16;">Обработка</a>
+                        {% elif status == 'error' %}
+                            <a href="#" class="suc" style="color: red;">Ошибка,
+                            {% if error_massage %}
+                                {{ error_massage }}
+                            {% else %}
+                                напишите в поддержку
+                            {% endif %}
+                            </a>
+                        {% endif %}
+                    </div>
+                    <div class="links">
+                        <a href="#">Сумма</a>
+                        <a href="#" class="suc" style="">{{ sum }} ₽</a>
+                    </div>
+                    <div class="links">
+                        <a href="#">Юзернейм</a>
+                        <a href="#" class="suc" style="">{{ username }}</a>
+                    </div>
+                    <div class="links">
+                        <a href="#">Оставить отзыв</a>
+                        <a href="{{ buy_url }}" class="suc" style="color: aqua" target="_blank">Перейти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- partial -->
+</body>
+</html>
