@@ -14,4 +14,6 @@ Digiseller-API [`Blink`](https://my.digiseller.com/inside/api_general.asp)
 * * Open `config.py` and change digiseller_token your shop
 * To run use command `docker-compose up --build`
 * To down docker use command `docker-compose down`
+
+U can also check page via [`url`](https://xn--e1aahbnfibfajbvo.xn--p1ai/steam?uniquecode=043A011C69C64BED)
 ![image](https://github.com/Billar42/SteamFill/assets/75508060/f3257e5a-9413-409b-84ae-9112d122967a)
